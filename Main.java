@@ -6,8 +6,11 @@ public class Main {
 		boolean continuar = true;
 		int opcion;
 		
-		Scanner leer = new Scanner(System.in);
+		double valorDeA, valorDeB, resultado = 0;
 		
+		//bloque de instancias
+		Scanner leer = new Scanner(System.in);
+		Suma objSuma = new Suma();
 		
 		do{
 			
@@ -21,7 +24,16 @@ public class Main {
 			
 			switch (opcion) {
 			case 1:
-				//Falta crear el objeto y mandar los parámetros para retornar el resultado
+				
+				System.out.println("Dame el valor de A");
+				valorDeA = leer.nextDouble();
+				
+				System.out.println("Dame el valor de B");
+				valorDeB = leer.nextDouble();
+				
+				resultado = objSuma.metodoSuma(valorDeA, valorDeB, resultado);
+				
+				System.out.println("El resultado de tu operación es: "+resultado);
 				break;
 				
 			case 2:
